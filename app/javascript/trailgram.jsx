@@ -1,15 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import * as SessionAPIUtil from './util/session_api_util';
+
 import configureStore from './store/store';
+import Index from './components/index';
 
 document.addEventListener('DOMContentLoaded', () => {
   const store = configureStore();
 
+  
   window.getState = store.getState;
   window.dispatch = store.dispatch;
 
-  const rootEl = document.getElementById("root");
+  const indexEl = document.getElementById("index");
 
-  ReactDOM.render(<h1>Welcome to trailgram</h1>, rootEl);
+  ReactDOM.render(<Index store={store} />, indexEl);
 });
