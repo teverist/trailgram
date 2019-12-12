@@ -19,7 +19,7 @@ class LoginForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const user = Object.assign({}, this.state);
+    const user = {user: Object.assign({}, this.state)};
     this.props.processForm(user);
   }
 
@@ -50,6 +50,17 @@ class LoginForm extends React.Component {
               className="login-input"
               placeholder="Your email"
             />
+            <br/>
+            <input type="password"
+              value={this.state.password}
+              onChange={this.update('password')}
+              className="login-input"
+              placeholder="Password"
+            />
+            <br/>
+            <input type="submit"
+              className="session-submit"
+            />
           </div>
         </form>
       </div>
@@ -57,4 +68,4 @@ class LoginForm extends React.Component {
   }
 }
 
-export default LoginForm;
+export default withRouter(LoginForm);

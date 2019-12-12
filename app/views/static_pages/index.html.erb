@@ -1,4 +1,8 @@
-<h1>StaticPages#index</h1>
-<p>Find me in app/views/static_pages/index.html.erb</p>
+<% if logged_in? %>
+  <script id="bootstrap-current-user" type="text/javascript">
+  	window.currentUser = <%= render("api/users/user.json.jbuilder",
+  		user: current_user).html_safe %>
+  </script>
+<% end %>
 
-<%= javascript_pack_tag 'hello_react' %>
+<p>hello</p>
