@@ -16,40 +16,73 @@
 
 
 // Google Fonts
-@import url('https://fonts.googleapis.com/css?family=Freckle+Face');
+@import url('https://fonts.googleapis.com/css?family=Gugi');
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
 
 // Font Varibles
-$logo: 'Freckle Face', cursive;
-$roboto: 'Roboto', sans-serif;
+$logo: 'Gugi', cursive;
+$main-font: -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto, Helvetica, Arial, sans-serif;
 
 // Color Variables
-$corporate: #419149;
-$sep-gray: #E6E6EB;
-$border-gray: #cccccc;
+$corporate: #005260;
+$gray: #cccccc;
 
-#logo {
-  font-family: $logo;
-  font-size: 30px;
-  color: $corporate;
-}
-
-.login-signup-demo {
+#user-dropdown-btn {
   display: flex;
-  justify-content: space-between;
-  border-bottom: 1px solid $sep-gray;
-  padding: 0 16px;
-  height: 50px;
   align-items: center;
 }
 
-.login-button {
-  border-radius: 3px;
-  border: 1px solid $border-gray;
-  font-size: 14px;
-  text-decoration: none;
-  font-family: $roboto;
-  padding: 10px 30px;
-  font-weight: 700;
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+.header-logo {
   color: $corporate;
+  font-family: $logo;
+  font-size: 30px;
+  padding-top: 4px;
+}
+
+.header-nav {
+  display: flex;
+  border-bottom: 1px solid $gray;
+  justify-content: space-between;
+  font-family: $main-font;
+  height: 50px;
+  align-items: center;
+  min-width: 250px;
+
+  .left-nav {
+    display: flex;
+    padding-left: 5vw;
+  }
+
+  .right-nav {
+    display: flex;
+    padding-right: 5vw;
+  }
+
+  .left-nav > ul {
+    display: flex;
+  }
+
+  .right-nav > ul {
+    display: flex;
+  }
+
+#splash-login-button {
+    color: $corporate;
+    font-weight: 700;
+    border: 1px solid $gray;
+    padding: 12px 30px;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: background-color 200ms ease, color 200ms ease, border-color 200ms ease;
+  }
+
+  #splash-login-button:hover {
+    background-color: gainsboro;
+    border-color: darkgrey;
+  }
 }

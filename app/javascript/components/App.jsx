@@ -14,7 +14,7 @@ import LoginFormContainer from './session_forms/login_form_container';
 import SignupFormContainer from './session_forms/signup_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import SplashForm from './session_forms/splash_form';
-import DemoFormContainer from './session_forms/demo_form_container';
+
 
 const App = () => (
   <div>
@@ -25,7 +25,6 @@ const App = () => (
     <Switch>
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute exact path="/signup" component={SignupFormContainer} />
-      <AuthRoute exact path="/demo" component={DemoFormContainer} />
       <Route exact path="/" component={SplashForm} />
     </Switch>
   </div>
